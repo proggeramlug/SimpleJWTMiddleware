@@ -3,14 +3,14 @@ import Vapor
 import JWT
 
 public struct Payload: JWTPayload {
-    let firstname: String?
-    let lastname: String?
-    let email: String
-    let role: String
-    let id: Int
-    let status: Int = 0
-    let exp: String
-    let iat: String
+    public let firstname: String?
+    public let lastname: String?
+    public let email: String
+    public let role: String
+    public let id: Int
+    public let status: Int = 0
+    public let exp: String
+    public let iat: String
     
     init(id: Int, email: String, role: String) {
         self.id = id
