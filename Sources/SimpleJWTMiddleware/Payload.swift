@@ -2,7 +2,7 @@ import Foundation
 import Vapor
 import JWT
 
-struct Payload: JWTPayload {
+public struct Payload: JWTPayload {
     let firstname: String?
     let lastname: String?
     let email: String
@@ -22,7 +22,7 @@ struct Payload: JWTPayload {
         self.iat = String(Date().timeIntervalSince1970)
     }
     
-    func verify(using signer: JWTSigner) throws {
+   public func verify(using signer: JWTSigner) throws {
         let expiration = Date(timeIntervalSince1970: Double(self.exp)!)
         try ExpirationClaim(value: expiration).verifyNotExpired()
     }
