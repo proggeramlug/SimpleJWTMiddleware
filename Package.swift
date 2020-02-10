@@ -15,7 +15,6 @@ let package = Package(
     .package(url: "https://github.com/vapor/jwt.git", from: "4.0.0-beta.2"),
     ],
     targets: [
-        .target(name: "SimpleJWTMiddleware", dependencies: ["Vapor", "JWT"]),
-        .testTarget(name: "SimpleJWTMiddlewareTests", dependencies: ["SimpleJWTMiddleware"])
+        .target(name: "SimpleJWTMiddleware", dependencies: ["Vapor", "JWT"])
     ]
 )
