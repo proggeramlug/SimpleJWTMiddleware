@@ -4,9 +4,6 @@ import PackageDescription
 
 let package = Package(
     name: "SimpleJWTMiddleware",
-    platforms: [
-       .macOS(.v10_15)
-    ],
     products: [
         .library(name: "SimpleJWTMiddleware", targets: ["SimpleJWTMiddleware"]),
     ],
