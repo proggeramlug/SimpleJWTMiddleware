@@ -11,7 +11,7 @@ public struct Payload: JWTPayload {
     public let exp: String
     public let iat: String
     
-    init(id: Int, email: String) {
+    public init(id: Int, email: String) {
         self.id = id
         self.email = email
         self.firstname = nil
