@@ -29,12 +29,7 @@ extension AnyHashable {
 
 extension Request {
     var loggedIn: Bool {
-//        if (self.storage[PayloadKey.self]) != nil {
-//            return true
-//        }
-//        return false 
         return self.storage[PayloadKey.self] != nil ? true : false
-
     }
 
     var payload: Payload {
