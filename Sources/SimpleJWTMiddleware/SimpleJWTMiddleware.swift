@@ -33,7 +33,7 @@ extension Request {
 //            return true
 //        }
 //        return false 
-        self.storage[PayloadKey.self] != nil ? return true : false
+        return self.storage[PayloadKey.self] != nil ? true : false
 
     }
 
