@@ -2,6 +2,10 @@ import Foundation
 import Vapor
 import JWT
 
+struct PayloadKey: StorageKey {
+    typealias Value = Payload
+}
+
 public struct Payload: JWTPayload {
     public let firstname: String?
     public let lastname: String?
