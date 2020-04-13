@@ -28,14 +28,18 @@ extension AnyHashable {
 }
 
 extension Request {
-    public var loggedIn: Bool {
-        if (self.userInfo[.payload] as? Payload) != nil {
-            return true
-        }
-        return false
+    var loggedIn: Bool {
+//        if (self.storage[PayloadKey.self]) != nil {
+//            return true
+//        }
+//        return false 
+        self.storage[PayloadKey.self] != nil ? return true : false
+
     }
-    public var payload: Payload {
-        get { self.userInfo[.payload] as! Payload }
-        set { self.userInfo[.payload] = newValue }
+
+    var payload: Payload {
+        get { self.storage[PayloadKey.self]! }
+        set { self.storage[PayloadKey.self] = newValue }
     }
+
 }
